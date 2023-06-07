@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Jun 05 10:18:58 CAT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0188-8aa3-4a5a-000007391000 
+on database directory memory:C:\Users\Tinotenda.Muchena\Documents\GitHub\course-api\26a45324-1de9-4743-b978-1c3d0a92791b with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
+Loaded from file:/C:/Users/Tinotenda.Muchena/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.18+9-LTS-195
+user.dir=C:\Users\Tinotenda.Muchena\Documents\GitHub\course-api
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
