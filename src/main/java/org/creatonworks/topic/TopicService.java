@@ -3,7 +3,7 @@ package org.creatonworks.topic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.Id;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,6 +12,7 @@ import java.util.List;
 public class TopicService {
 @Autowired
  private TopicRepository topicRepository;
+public Topic topic = new Topic();
 private List<Topic> topics =new ArrayList<>( Arrays.asList(
         new Topic("spring","SpringTests","Spring testing handbook"),
         new Topic("vb.net","VB.Net Tests","Visual Basic testing handbook"),
@@ -26,7 +27,9 @@ public List<Topic> getAllTopics(){
 
 public Topic getTopic(String id){
 
-    return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+    return topicRepository.findById(id);
+//return topicRepository.findById(Id id);
+   // return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
 }
 
     public void addTopic(Topic topic) {
@@ -43,10 +46,11 @@ public Topic getTopic(String id){
 
         }**/
 
-     // topicRepository.save(Id);
+      topicRepository.save(topic);
 
 }
     public void deleteTopic(String id) {
-    topics.removeIf(t->t.getId().equals(id));
+    topicRepository.deleteById(id);
+    //topics.removeIf(t->t.getId().equals(id));
     }
 }
